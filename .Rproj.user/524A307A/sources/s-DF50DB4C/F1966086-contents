@@ -1,0 +1,29 @@
+data = rbind(
+  as.data.frame(list(y=4,x1=3, x2=5)),
+  as.data.frame(list(y=2,x1=3, x2=4)),
+  as.data.frame(list(y=4,x1=2, x2=2)),
+  as.data.frame(list(y=6,x1=1, x2=1)),
+  as.data.frame(list(y=7,x1=3, x2=2)),
+  as.data.frame(list(y=2,x1=3, x2=4)),
+  as.data.frame(list(y=4,x1=2, x2=2)),
+  as.data.frame(list(y=6,x1=1, x2=1)),
+  as.data.frame(list(y=7,x1=3, x2=2)),
+  as.data.frame(list(y=3,x1=2, x2=7))
+)  
+
+frm=y~x1+x2
+model = lm(data=data, formula=frm)
+frm=NULL
+summary(model)
+
+modelToFormula <- function(model){
+  
+  frm=stats::formula(model)
+  coe=stats::coefficients(model)
+  
+  leftSide = frm[[2]]
+  rightSide = paste(paste(coe,names(coe),sep='*'),collapse='+')
+
+  return(as.formula(paste(leftSide, rightSide,sep='~')))
+  
+}

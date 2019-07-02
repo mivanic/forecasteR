@@ -1,3 +1,21 @@
+#' Turn an estimated model into a formula
+#'
+#' \code{modelToFormula} returns a formula with coefficients placed as factors.
+#'
+#' @param model An estimated model which includes the original call and the estimated coefficients
+#' @return A formula
+#' @export
+
+modelToFormula <- function(model) {
+  frm = stats::formula(model)
+  coe = stats::coefficients(model)
+
+  leftSide = frm[[2]]
+  rightSide = paste(paste(coe, names(coe), sep = '*'), collapse = '+')
+
+  return(stats::as.formula(paste(leftSide, rightSide, sep = '~')))
+}
+
 solveModel <-
   function(endogenous,
            exogenous,
@@ -7,7 +25,7 @@ solveModel <-
            upperBounds = NULL) {
     # get a list of determined variables (have a definite value rather than NA) these variables do not need to be solved for and their
     # corresponding equations will be removed
-    determinedVariables = names(vector[is.finite(vector)])
+    determinedVariables = names(endogenous[is.finite(endogenous)])
 
     # exclude equations that are not needed when an equation name equals a determined variable, it is excluded
 
@@ -18,24 +36,27 @@ solveModel <-
       }
     }
 
-    exogenous = c(exogenous, vector[determinedVariables])
+    exogenous = c(exogenous, endogenous[determinedVariables])
 
     # modifiedModel = model
-    unknownVariables = vector[!is.finite(vector)]
+    unknownVariables = endogenous[!is.finite(endogenous)]
 
     # set unknown (NA) variables to some starting value =1
     unknownVariables[] = 1
 
 
     unknownVariables =     solver(
-      model = model,
-      endogenous = endogenous,
+      formulas = modifiedModel,
+      endogenous = unknownVariables,
       exogenous = exogenous,
       lowerBounds = lowerBounds,
       upperBounds = upperBounds
     )$results
 
-    return(unknownVariables)
+    toReturn = endogenous
+    toReturn[names(unknownVariables)] =  unknownVariables[names(unknownVariables)]
+
+    return(toReturn)
   }
 
 #' Forecast missing values based on a model (set of equations).
@@ -59,7 +80,7 @@ forecast <-
            model,
            periods,
            periodColumn,
-           transformation,
+           transformation = NULL,
            lowerBounds,
            upperBounds,
            solver) {
@@ -72,13 +93,20 @@ forecast <-
 
     # execute for each required period
     for (p in periods) {
-      currentData = transformation(data)
+      if (is.null(transformation)) {
+        currentData = data
+      } else {
+        currentData = transformation(data)
+      }
+
 
       currentRow = which(currentData[, periodColumn] == p)[1]
 
+
       solvedModel = solveModel(
-        endogenous = data[currentRow, endogenousVariableNames],
-        exogenous = data[currentRow, setdiff(modelVariables, endogenousVariableNames)],
+        endogenous = unlist(currentData[currentRow, endogenousVariableNames, drop = F]),
+        exogenous = unlist(currentData[currentRow, setdiff(modelVariables, endogenousVariableNames), drop =
+                                         F]),
         model = model,
         lowerBounds = lowerBounds,
         upperBounds = upperBounds,

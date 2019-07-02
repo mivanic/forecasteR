@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562099578179.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "713E25E8",
+    "lastKnownWriteTime" : 1562104016,
+    "last_content_update" : 1562104016387,
+    "path" : "~/forecasteR/tests/testthat/test-forecast.R",
+    "project_path" : "tests/testthat/test-forecast.R",
+    "properties" : {
+        "cursorPosition" : "73,0",
+        "scrollLine" : "66"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

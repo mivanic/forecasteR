@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562098758634.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4168931D",
+    "lastKnownWriteTime" : 1562098884,
+    "last_content_update" : 1562098884800,
+    "path" : "~/forecasteR/tests/testthat/test-modelToFormula.R",
+    "project_path" : "tests/testthat/test-modelToFormula.R",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
