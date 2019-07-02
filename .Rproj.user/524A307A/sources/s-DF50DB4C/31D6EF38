@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562076886767.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "31D6EF38",
+    "lastKnownWriteTime" : 1562088992,
+    "last_content_update" : 1562088992952,
+    "path" : "~/forecasteR/R/forecasteR.R",
+    "project_path" : "R/forecasteR.R",
+    "properties" : {
+        "cursorPosition" : "83,34",
+        "scrollLine" : "62"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
