@@ -26,7 +26,8 @@ modelToFormula <- function(model) {
   leftSide = frm[[2]]
   rightSide = paste(paste(coe, names(coe), sep = '*'), collapse = '+')
 
-  return(stats::as.formula(paste(leftSide, rightSide, sep = '~')))
+  return(stats::as.formula(paste(ifelse(length(leftSide)==1,leftSide,base::format(leftSide)), rightSide, sep = '~')))
+  #return(base::format(stats::as.formula(paste(base::format(leftSide), rightSide, sep = '~'))))
 }
 
 solveModel <-

@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "31D6EF38",
-    "lastKnownWriteTime" : 1562159852,
-    "last_content_update" : 1562159852328,
+    "lastKnownWriteTime" : 1562182783,
+    "last_content_update" : 1562182783054,
     "path" : "~/forecasteR/R/forecasteR.R",
     "project_path" : "R/forecasteR.R",
     "properties" : {
-        "cursorPosition" : "22,29",
-        "scrollLine" : "0"
+        "cursorPosition" : "20,0",
+        "scrollLine" : "5"
     },
     "relative_order" : 1,
     "source_on_save" : false,

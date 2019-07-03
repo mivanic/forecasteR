@@ -12,8 +12,8 @@
     "path" : "~/forecasteR/tests/testthat/test-forecast.R",
     "project_path" : "tests/testthat/test-forecast.R",
     "properties" : {
-        "cursorPosition" : "79,16",
-        "scrollLine" : "63"
+        "cursorPosition" : "62,3",
+        "scrollLine" : "42"
     },
     "relative_order" : 4,
     "source_on_save" : false,

@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "4168931D",
-    "lastKnownWriteTime" : 1562098884,
-    "last_content_update" : 1562098884800,
+    "lastKnownWriteTime" : 1562182971,
+    "last_content_update" : 1562182971998,
     "path" : "~/forecasteR/tests/testthat/test-modelToFormula.R",
     "project_path" : "tests/testthat/test-modelToFormula.R",
     "properties" : {
-        "cursorPosition" : "1,0",
-        "scrollLine" : "0"
+        "cursorPosition" : "38,0",
+        "scrollLine" : "9"
     },
     "relative_order" : 3,
     "source_on_save" : false,
