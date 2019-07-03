@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "713E25E8",
-    "lastKnownWriteTime" : 1562104016,
-    "last_content_update" : 1562104016387,
+    "lastKnownWriteTime" : 1562159259,
+    "last_content_update" : 1562159259981,
     "path" : "~/forecasteR/tests/testthat/test-forecast.R",
     "project_path" : "tests/testthat/test-forecast.R",
     "properties" : {
-        "cursorPosition" : "73,0",
-        "scrollLine" : "66"
+        "cursorPosition" : "79,16",
+        "scrollLine" : "63"
     },
     "relative_order" : 4,
     "source_on_save" : false,

@@ -1,5 +1,5 @@
 {
-    "path" : "~/forecasteR",
+    "path" : "~/forecasteR/tests/testthat",
     "sortOrder" : [
         {
             "ascending" : true,

@@ -1,3 +1,16 @@
+#' Estimate statistical models on data based on a given list of relationships
+#'
+#' \code{estimateStatisticalModels} returns a list of statistical models.
+#'
+#' @inheritParams forecast
+#' @param formulas A list of formulas (e.g., list(x = price ~ weather + month, y = demand ~ price + income))
+#' @return A formula
+#' @export
+
+estimateModel <- function(data, formulas)
+  Map(function(f)
+    stats::lm(data = data, formula = f), formulas)
+
 #' Turn an estimated model into a formula
 #'
 #' \code{modelToFormula} returns a formula with coefficients placed as factors.

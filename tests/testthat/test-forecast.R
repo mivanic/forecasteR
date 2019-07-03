@@ -69,7 +69,7 @@ test_that("forecasting works", {
     periodColumn = 'p',
     lowerBounds = NULL,
     upperBounds = NULL,
-    solver = solver::solveSystem
+    solver = solveR::solveSystem
   )
 
   expect_equal(result[10, 1], 6.625954, tolerance = 1e-5)
@@ -88,7 +88,7 @@ test_that("forecasting works", {
     ,
     lowerBounds = NULL,
     upperBounds = NULL,
-    solver = solver::solveSystem
+    solver = solveR::solveSystem
   )
   expect_equal(result[10, 1], 2*6.625954, tolerance = 1e-5)
   expect_equal(result[9, 1], 2*1.893130, tolerance = 1e-5)

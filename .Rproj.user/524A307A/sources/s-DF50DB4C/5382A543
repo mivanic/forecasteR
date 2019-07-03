@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562157709067.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5382A543",
+    "lastKnownWriteTime" : 1562158563,
+    "last_content_update" : 1562158563099,
+    "path" : "~/forecasteR/tests/testthat/test-estimateModel.R",
+    "project_path" : "tests/testthat/test-estimateModel.R",
+    "properties" : {
+        "cursorPosition" : "57,13",
+        "scrollLine" : "41"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

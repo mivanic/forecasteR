@@ -4,8 +4,8 @@
 \alias{forecast}
 \title{Forecast missing values based on a model (set of equations).}
 \usage{
-forecast(data, model, periods, periodColumn, transformation, lowerBounds,
-  upperBounds, solver)
+forecast(data, model, periods, periodColumn, transformation = NULL,
+  lowerBounds, upperBounds, solver)
 }
 \arguments{
 \item{data}{A dataframe with some blanks in endogenous variables, and a period column}
