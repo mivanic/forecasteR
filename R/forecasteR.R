@@ -7,7 +7,7 @@
 #' @return A formula
 #' @export
 
-estimateModel <- function(data, formulas)
+estimateModels <- function(data, formulas)
   Map(function(f)
     stats::lm(data = data, formula = f), formulas)
 

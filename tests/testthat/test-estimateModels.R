@@ -62,7 +62,7 @@ test_that("Estimate model works", {
     ))
   )
 
-  result = estimateModel(data = data,
+  result = estimateModels(data = data,
                          formulas = list(formula1 = x1 ~ y, formula2 = x2 ~ y))
 
   expect_equal(length(result), 2)
